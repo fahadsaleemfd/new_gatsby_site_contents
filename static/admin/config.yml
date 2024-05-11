@@ -13,7 +13,7 @@ collections:
     folder: src/pages/posts/blogs/
     summary: "{{title}}"
     create: true
-    delete: false
+    delete: true
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines for Home page.
@@ -24,6 +24,7 @@ collections:
       - { label: "Author", widget: "string", name: "author" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Archive", name: "archive", widget: "boolean", default: false }
+      - { label: "Slug", name: "slug", widget: "string" }
       - label: "Categories"
         name: "categories"
         widget: "relation"

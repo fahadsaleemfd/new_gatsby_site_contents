@@ -6,6 +6,7 @@ module.exports = {
 		title: `My Gatsby Site`,
 		siteUrl: `https://www.yourdomain.tld`,
 	},
+
 	plugins: [
 		"gatsby-plugin-netlify-cms",
 		"gatsby-plugin-postcss",
@@ -21,3 +22,4 @@ module.exports = {
 		},
 	],
 };
+
