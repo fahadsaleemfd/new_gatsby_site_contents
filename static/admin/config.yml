@@ -1,0 +1,43 @@
+backend:
+  name: github
+  branch: master
+  repo: fahadsaleemfd/new_gatsby_site_contents
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: Blog
+    label: Blog Section
+    label_singular: Blog Section
+    folder: src/pages/posts/blogs/
+    summary: "{{title}}"
+    create: true
+    delete: false
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Home page.
+    fields:
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - { label: "Description", name: "text", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", widget: "string", name: "author" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Archive", name: "archive", widget: "boolean", default: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "relation"
+        collection: "categories"
+        multiple: true
+        value_field: "category_name"
+        search_fields: ["category_name"]
+
+  - name: "categories"
+    label: "Categories"
+    identifier_field: slug
+    folder: "assets/content/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Category", name: "category_name", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
