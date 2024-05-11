@@ -1,5 +1,5 @@
 ---
-title: My new title
+title: My new title updated
 text: n﻿ew title will be here
 date: 2024-05-11T09:39:14.908Z
 author: Muhammad Fahid
